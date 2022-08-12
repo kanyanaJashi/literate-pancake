@@ -1,6 +1,6 @@
 # Python Exceptions
 
-The Aim and main goal here is to understand what an exception in Python is. 
+The main goal here is to understand what an exception is in Python. 
 Python, well known as a high-level, interpreted, general-purpose programming language with its design philosophy emphasizing code readability with the use of significant indentation, dynamically-typed and garbage-collected, supporting multiple programming paradigms, including structured (particularly procedural), object-oriented and functional programming.
 
 ## Errors in Python:
