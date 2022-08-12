@@ -18,7 +18,7 @@ Another aspect of understanding syntax errors is that they demonstrate how, unli
 ### An example of syntax error:
 
 
-## What’s runtime error?
+## What is a runtime error?
 A runtime error is an error which occurs when a program is syntactically correct but contains an issue that is only detected during program execution. Errors that occur at runtime (after passing the syntax test) are called exceptions or logical errors.
 
 ## What is a Logic error?
