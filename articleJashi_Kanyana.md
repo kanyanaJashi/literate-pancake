@@ -4,6 +4,7 @@ The main goal here is to understand what an exception is in Python.
 Python, well known as a high-level, interpreted, general-purpose programming language with its design philosophy emphasizing code readability with the use of significant indentation, dynamically-typed and garbage-collected, supporting multiple programming paradigms, including structured (particularly procedural), object-oriented and functional programming.
 Let's come from a perspective of studying exceptions from a well known notion of errors, there will be some good reason that we'll discover together in this developpement.
 
+
 ## Errors in Python:
 When a Python program meets an error, it stops the execution of the rest of the program. An error in Python might be either syntax errors, logic errors or exceptions . Thus, it is said Logic errors and some exceptions are runtime errors.
 
