@@ -42,6 +42,7 @@ Traceback (most recent call last):
 IndexError: list index out of range
   
 \>>>l[1] 
+
 2
 
 
@@ -49,3 +50,19 @@ So here is what we just did. In line 1 we made a list with three elements in it.
 The TypeError complains that it was expecting an integer and not a string. This seems like a pretty reasonable reaction. So in line 3 we give it an integer. Unfortunately the only indices available for l are 0,1 and 2, but we're trying to access l[4]. Naturally this also isn't right. So Python complains again by raising an IndexError and printing an appropriate traceback.
 Finally, we do something sensible and access l[1]. This, as compared to our other attempts, is right. l[1] has the value 2.
 Python uses Exceptions to tell on bad code. Exceptions are raised when something doesn't work according to plan, where the program cannot proceed. And there are different types of exceptions for different situations.
+  
+## Type of Exceptions:
+  
+Built-in Exceptions
+  
+User-define Exceptions or Custom Exceptions
+
+  
+  
+  
+## References
+https://www.javatpoint.com/python-exception-handling#:~:text=In%20Python%2C%20we%20catch%20exceptions,lines%20that%20handle%20the%20exception.
+https://www.programiz.com/python-programming/exceptions
+https://www.techopedia.com/definition/13391/syntax-error
+https://runestone.academy/ns/books/published/fopp/Exceptions/intro-exceptions.html?highlight=error
+https://www.codementor.io/@sheena/how-to-write-python-custom-exceptions-du107ufv9
