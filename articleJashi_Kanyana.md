@@ -23,3 +23,22 @@ A logic error is an error in a program’s code that gives way to unanticipated 
 Logic errors are not always easy to recognize immediately. This is due to the fact that such errors, unlike that of syntax errors, are valid when considered in the language, but do not produce the intended behavior. These can occur in both interpreted and compiled languages. A logic error is also known as a semantic error.
 ## What’s an Exception?
 An exception in Python is an incident that happens while executing a program that causes the regular course of the program's commands to be disrupted. When a Python code comes across a condition it can't handle, it raises an exception. An object in Python that describes an error is called an exception. When a Python code throws an exception, it has two options: handle the exception immediately or stop and quit. Thus, an exception is a signal that a condition has occurred that can’t be easily handled using the normal flow-of-control of a Python program. Exceptions are often defined as being “errors” 
+but this is not always the case. All errors in Python are dealt with using exceptions, but not all exceptions are errors. 
+If you have been coding in Python for any length of time, no doubt you have seen a traceback. Just in case you haven't, here we'll make one happen. You can open up a Python console and type in the statements that follow, or just read along:
+
+>>> l = [1,2,3]               #1
+>>> l['apples']               #2
+Traceback (most recent call last):
+  File "<stdin>", line 1, in <module>
+TypeError: list indices must be integers, not str
+>>> l[4]                      #3
+Traceback (most recent call last):
+  File "<stdin>", line 1, in <module>
+IndexError: list index out of range
+>>> l[1]                      #4
+
+
+So here is what we just did. In line 1 we made a list with three elements in it. Line 2 tries to access the element at the index 'apples'. Now, since that's just really not right, Python complains. It does so by raising a TypeError. TypeError is a kind of Exception. When an Exception gets raised and but does not get caught, then it ends up printing a traceback to the error output. In the case of the Python console, the error output is just the console. A traceback message gives some information about the actual error and gives some detail about how we got to the point where the error actually happened. 
+The TypeError complains that it was expecting an integer and not a string. This seems like a pretty reasonable reaction. So in line 3 we give it an integer. Unfortunately the only indices available for l are 0,1 and 2, but we're trying to access l[4]. Naturally this also isn't right. So Python complains again by raising an IndexError and printing an appropriate traceback.
+Finally, we do something sensible and access l[1]. This, as compared to our other attempts, is right. l[1] has the value 2.
+Python uses Exceptions to tell on bad code. Exceptions are raised when something doesn't work according to plan, where the program cannot proceed. And there are different types of exceptions for different situations.
