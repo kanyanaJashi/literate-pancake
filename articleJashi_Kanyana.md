@@ -26,16 +26,20 @@ An exception in Python is an incident that happens while executing a program tha
 but this is not always the case. All errors in Python are dealt with using exceptions, but not all exceptions are errors. 
 If you have been coding in Python for any length of time, no doubt you have seen a traceback. Just in case you haven't, here we'll make one happen. You can open up a Python console and type in the statements that follow, or just read along:
 
-l = [1,2,3]               
-l['apples']               
+\>>>l = [1,2,3]               
+
+\>>>l['apples']               
 Traceback (most recent call last):
   File "<stdin>", line 1, in <module>
 TypeError: list indices must be integers, not str
-l[4]                      
+
+\>>>l[4]                      
 Traceback (most recent call last):
   File "<stdin>", line 1, in <module>
 IndexError: list index out of range
-l[1]                      
+  
+\>>>l[1] 
+2
 
 
 So here is what we just did. In line 1 we made a list with three elements in it. Line 2 tries to access the element at the index 'apples'. Now, since that's just really not right, Python complains. It does so by raising a TypeError. TypeError is a kind of Exception. When an Exception gets raised and but does not get caught, then it ends up printing a traceback to the error output. In the case of the Python console, the error output is just the console. A traceback message gives some information about the actual error and gives some detail about how we got to the point where the error actually happened. 
