@@ -1,5 +1,5 @@
-#Python Exceptions
-##Errors in Python:
+# Python Exceptions
+## Errors in Python:
 When a Python program meets an error, it stops the execution of the rest of the program. An error in Python might be either syntax errors, logic errors or exceptions . Logic errors and some exceptions are runtime errors.
 ##What is a syntax error?
 Syntax errors are the most basic type of error. They arise when the Python parser is unable to understand a line of code. A syntax error is an error in the syntax of a coding or programming language, entered by a programmer. Syntax errors are caught by the Python parser, and the programmer must fix them before the program runs . Syntax errors are almost always fatal, it means there is almost never a way to successfully execute a piece of code containing syntax errors. The syntax error is an incorrect construction or misspelling in the code. Most syntax errors are typos, incorrect indentation, or incorrect arguments.
