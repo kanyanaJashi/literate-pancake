@@ -134,9 +134,11 @@ Exception                                 Traceback (most recent call last)
 
 Exception: x should not exceed 5. The value of x was: 6
 
+## Exception handling
 
+In Python programming, exception handling allows a programmer to enable flow control. Using try-except is the most common and natural way of handling unexpected errors along with many more exception handling constructs. We’ll get to explore some of the best techniques to use try-except in Python.
 
-
+       
 
 ## References
 https://www.javatpoint.com/python-exception-handling#:~:text=In%20Python%2C%20we%20catch%20exceptions,lines%20that%20handle%20the%20exception.
@@ -146,3 +148,4 @@ https://runestone.academy/ns/books/published/fopp/Exceptions/intro-exceptions.ht
 https://www.codementor.io/@sheena/how-to-write-python-custom-exceptions-du107ufv9
 https://www.programiz.com/python-programming/exceptions
 https://realpython.com/python-exceptions/
+https://www.techbeamers.com/use-try-except-python/
