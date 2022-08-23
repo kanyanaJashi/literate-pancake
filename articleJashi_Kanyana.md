@@ -411,7 +411,7 @@ Examples
 In this example, we will show how to raise an user-defined exception and catch errors in a program.
 This program prompts the user to enter an alphabet again and again until he inputs the stored alphabet only.
 For help, the program provides a hint to the user so that he can figure out the correct alphabet. Also, he can check whether his guess is higher or less than the stored alphabet.
-
+<em><strong> <br>
 #define Python user-defined exceptions <br>
 class Error(Exception): """Base class for other exceptions""" <br>
 &emsp;&emsp; pass <br>
@@ -421,7 +421,7 @@ class InputTooSmallError(Error): """Raised when the entered alpahbet is smaller 
 
 class InputTooLargeError(Error): """Raised when the entered alpahbet is larger than the actual one""" <br>
 &emsp;&emsp; pass <br>
-<em><strong>
+
 #our main program <br/>
 #user guesses an alphabet until he/she gets it right <br/>
 #you need to guess this alphabet <br/>
@@ -443,8 +443,8 @@ while True: <br>
 &emsp;&emsp;&emsp;&emsp;print("The entered alphabet is too large, try again!") <br>
 &emsp;&emsp;&emsp;&emsp;print('') <br>
 print("Congratulations! You guessed it correctly.")
-</strong></em> <br>
 
+</strong></em>
 
 Let’s test this program by supplying different inputs.
 
