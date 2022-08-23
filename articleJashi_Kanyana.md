@@ -18,6 +18,24 @@ Another aspect of understanding syntax errors is that they demonstrate how, unli
 
 ### An example of syntax error:
 
+#theofficefacts.py <br/>
+ages = { <br/>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;'pam': 24,<br/>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;'jim': 24 <br/>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;'michael': 43 <br/>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;} <br/>
+print(f'Michael is {ages["michael"]} years old.')
+
+$ python theofficefacts.py <br/>
+File "theofficefacts.py", line 5 <br/>
+'jim': 24 <br/>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; ^^
+SyntaxError: invalid syntax. Perhaps you forgot a comma?
+
+Process finished with exit code 1
+
+
+
 
 ## What is a runtime error?
 A runtime error is an error which occurs when a program is syntactically correct but contains an issue that is only detected during program execution. Errors that occur at runtime (after passing the syntax test) are called exceptions or logical errors.
@@ -108,6 +126,13 @@ We can use raise to throw an exception if a condition occurs, as typical user/pr
 x=10 <br />
 if x>5: <br />
 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; raise Exception('x should not exceed 5. The value of x was: {}'.format(x))
+
+Exception                                 Traceback (most recent call last)
+~\AppData\Local\Temp\ipykernel_20732\3673638409.py in <cell line: 1>()
+      1 if x>5:
+----> 2     raise Exception('x should not exceed 5. The value of x was: {}'.format(x))
+
+Exception: x should not exceed 5. The value of x was: 6
 
 
 
