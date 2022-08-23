@@ -124,10 +124,11 @@ def division(a, b): <br>
 &emsp;&emsp;return a / b <br>
 
 </strong></em>
+<em><strong>
 
 c = division(10, 0) <br>
 
-Output: <br>
+Output: <br> </strong></em>
 <em><strong>
 ZeroDivisionError: division by zero
 
@@ -384,12 +385,95 @@ Create Custom Exceptions in Python <br>
 
 
 
+### Create Exception Class in Python
+<em><strong>
+class UserDefinedError(Exception): <br>
+&emsp;&emsp; pass <br>
+
+raise UserDefinedError <br> </strong></em>
+>Traceback (most recent call last):<br>
+\__main__.UserDefinedError <br>
+<em><strong>
+
+raise UserDefinedError("An error occurred") <br>
+</strong></em>
+
+>Traceback (most recent call last): <br>
+\__main__.UserDefinedError: An error occurred <br>
+
+
+In the above code snippet, you can see that we have created a user-defined exception class, the “UserDefinedError.” It is using the base Exception class as the parent. Hence, the new user-defined exception class will raise exceptions as any other exception class does, i.e., by calling the “raise” statement with an optional error message.
+
+
+
+Examples
+
+In this example, we will show how to raise an user-defined exception and catch errors in a program.
+This program prompts the user to enter an alphabet again and again until he inputs the stored alphabet only.
+For help, the program provides a hint to the user so that he can figure out the correct alphabet. Also, he can check whether his guess is higher or less than the stored alphabet.
+
+#define Python user-defined exceptions <br>
+class Error(Exception): """Base class for other exceptions""" <br>
+&emsp;&emsp; pass <br>
+
+class InputTooSmallError(Error): """Raised when the entered alpahbet is smaller than the actual one""" <br>
+&emsp;&emsp; pass <br>
+
+class InputTooLargeError(Error): """Raised when the entered alpahbet is larger than the actual one""" <br>
+&emsp;&emsp; pass <br>
+<em><strong>
+#our main program <br/>
+#user guesses an alphabet until he/she gets it right <br/>
+#you need to guess this alphabet <br/>
+
+alphabet = 'm' <br>
+
+while True: <br>
+&emsp;&emsp; try: <br>
+&emsp;&emsp;&emsp;&emsp;apb =  raw_input("Enter an alphabet: ") <br>
+&emsp;&emsp;&emsp;&emsp;if apb < alphabet: <br>
+&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;raise InputTooSmallError <br>
+&emsp;&emsp;&emsp;&emsp;elif apb > alphabet: <br>
+&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;raise InputTooLargeError <br>
+&emsp;&emsp;&emsp;&emsp;break <br>
+&emsp;&emsp;except InputTooSmallError: <br>
+&emsp;&emsp;&emsp;&emsp;print("The entered alphabet is too small, try again!") <br>
+&emsp;&emsp;&emsp;&emsp;print('') <br>
+&emsp;&emsp;except InputTooLargeError: <br>
+&emsp;&emsp;&emsp;&emsp;print("The entered alphabet is too large, try again!") <br>
+&emsp;&emsp;&emsp;&emsp;print('') <br>
+print("Congratulations! You guessed it correctly.")
+</strong></em> <br>
+
+
+Let’s test this program by supplying different inputs.
+
+Enter an alphabet: s
+This value is too large, try again!
+
+Enter an alphabet: a
+This value is too small, try again!
+
+Enter an alphabet: l
+This value is too small, try again!
+
+Enter an alphabet: p
+This value is too large, try again!
+
+Enter a number: mCongratulations! You guessed it correctly. <br>
+
+Thus we can see that we have defined a base class called Error here in this program. It raises two exceptions (“InputTooSmallError” and “InputTooLargeError“) derived from the base class. It’s the standard way to define user-defined exceptions in Python programming.
+
+
+
+
+
 ## References
-https://www.javatpoint.com/python-exception-handling#:~:text=In%20Python%2C%20we%20catch%20exceptions,lines%20that%20handle%20the%20exception.
-https://www.programiz.com/python-programming/exceptions
+https://www.javatpoint.com/python-exception <br>
+https://www.programiz.com/python-programming/exceptions<br>
 https://www.techopedia.com/definition/13391/syntax-error
-https://runestone.academy/ns/books/published/fopp/Exceptions/intro-exceptions.html?highlight=error
+https://runestone.academy/ns/books/published/fopp/Exceptions/intro-exceptions.html?highlight=error <br>
 https://www.codementor.io/@sheena/how-to-write-python-custom-exceptions-du107ufv9
-https://www.programiz.com/python-programming/exceptions
-https://realpython.com/python-exceptions/
+https://www.programiz.com/python-programming/exceptions <br>
+https://realpython.com/python-exceptions <br>
 https://www.techbeamers.com/use-try-except-python/
