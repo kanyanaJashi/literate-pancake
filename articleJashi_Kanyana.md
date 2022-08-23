@@ -137,7 +137,8 @@ ZeroDivisionError: division by zero
 
 ## User-define Exceptions or Custom Exceptions
 
-We can use raise to throw an exception if a condition occurs, as typical user/programmer defined exception . The statement is complemented with a custom exception.
+A custom exception is one which the programmer creates himself.
+He does it by adding a new class. The trick here is to derive the custom exception class from the base exception class. We can use raise to throw an exception if a condition occurs, as typical user/programmer defined exception . The statement is complemented with a custom exception.
 
 ![alt text](https://files.realpython.com/media/raise.3931e8819e08.png)
 
