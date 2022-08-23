@@ -31,18 +31,15 @@ but this is not always the case. All errors in Python are dealt with using excep
 If you have been coding in Python for any length of time, no doubt you have seen a traceback. Just in case you haven't, here we'll make one happen. You can open up a Python console and type in the statements that follow, or just read along:
 
 
-list1 = [1,2,3]               
-
-list1['apples']               
+list1 = [1,2,3]<br />             
+list1['apples']<br />           
 Traceback (most recent call last):
   File "<stdin>", line 1, in <module>
-TypeError: list indices must be integers, not str
-
+TypeError: list indices must be integers, not str <br />
 list1[4]                      
 Traceback (most recent call last):
   File "<stdin>", line 1, in <module>
-IndexError: list index out of range
-
+IndexError: list index out of range <br />
 list[1]
 2
 
@@ -107,6 +104,12 @@ list(dir(locals()['__builtins__']))
 We can use raise to throw an exception if a condition occurs, as typical user/programmer defined exception . The statement is complemented with a custom exception.
 
 ![alt text](https://files.realpython.com/media/raise.3931e8819e08.png)
+
+x=10 <br />
+if x>5: <br />
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; raise Exception('x should not exceed 5. The value of x was: {}'.format(x))
+
+
 
 
 
