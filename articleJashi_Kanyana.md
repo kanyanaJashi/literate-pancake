@@ -354,20 +354,20 @@ Let’s take an example to clarify this.
 
 <em><strong>
 raise MemoryError <br>
-Traceback (most recent call last): <br>
+>Traceback (most recent call last): <br>
 ... <br>
 MemoryError <br>
 
-</strong></em>
 
->raise MemoryError("This is an argument") <br>
-Traceback (most recent call last): <br>
+
+raise MemoryError("This is an argument") <br>
+>Traceback (most recent call last): <br>
 ... <br>
+>MemoryError: This is an argument
+</strong></em>
+<em><strong> <br>
 
-MemoryError: This is an argument
-
-<em><strong>
-try:<br/>
+try: <br/>
 &emsp;&emsp;a = int(input("Enter a positive integer value: ")) <br>
 &emsp;&emsp;if a <= 0: <br>
 &emsp;&emsp;&emsp;&emsp;raise ValueError("This is not a positive number!!") <br>
@@ -430,7 +430,7 @@ alphabet = 'm' <br>
 
 while True: <br>
 &emsp;&emsp; try: <br>
-&emsp;&emsp;&emsp;&emsp;apb =  raw_input("Enter an alphabet: ") <br>
+&emsp;&emsp;&emsp;&emsp;apb =  input("Enter an alphabet: ") <br>
 &emsp;&emsp;&emsp;&emsp;if apb < alphabet: <br>
 &emsp;&emsp;&emsp;&emsp;&emsp;&emsp;raise InputTooSmallError <br>
 &emsp;&emsp;&emsp;&emsp;elif apb > alphabet: <br>
@@ -448,19 +448,20 @@ print("Congratulations! You guessed it correctly.")
 
 Let’s test this program by supplying different inputs.
 
-Enter an alphabet: s
+Enter an alphabet: s <br>
 This value is too large, try again!
 
-Enter an alphabet: a
+Enter an alphabet: a <br>
 This value is too small, try again!
 
-Enter an alphabet: l
+Enter an alphabet: l <br>
 This value is too small, try again!
 
-Enter an alphabet: p
+Enter an alphabet: p <br>
 This value is too large, try again!
 
-Enter a number: mCongratulations! You guessed it correctly. <br>
+Enter a number: m <br>
+Congratulations! You guessed it correctly. <br>
 
 Thus we can see that we have defined a base class called Error here in this program. It raises two exceptions (“InputTooSmallError” and “InputTooLargeError“) derived from the base class. It’s the standard way to define user-defined exceptions in Python programming.
 
